@@ -134,6 +134,7 @@ end;
 
 function Library:ApplyTextStroke(Inst)
     Inst.TextStrokeTransparency = 1;
+    Inst.RichText = true;
 
     Library:Create('UIStroke', {
         Color = Color3.new(0, 0, 0);
@@ -211,6 +212,7 @@ function Library:AddToolTip(InfoStr, HoverInstance)
         TextColor3 = Library.FontColor,
         TextXAlignment = Enum.TextXAlignment.Left;
         ZIndex = Tooltip.ZIndex + 1,
+        RichText = true;
 
         Parent = Tooltip;
     });
@@ -661,6 +663,7 @@ do
             TextXAlignment = Enum.TextXAlignment.Left;
             TextSize = 14;
             Text = ColorPicker.Title,--Info.Default;
+            RichText = true;
             TextWrapped = false;
             ZIndex = 16;
             Parent = PickerFrameInner;
